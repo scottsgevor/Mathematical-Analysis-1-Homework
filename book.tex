@@ -1,0 +1,36 @@
+% !TEX program = xelatex
+% 编译链：xelatex → biber → xelatex → xelatex
+\documentclass[12pt, a4paper, twoside, openright, fontset=fandol]{ctexbook}
+
+\input{settings}
+\addbibresource{refs.bib}
+
+\title{\Huge\bfseries 我的大型书籍}
+\author{著者姓名}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+% --- 消除封面与前言间的空白页（分组局部修改）---
+\begingroup
+\let\cleardoublepage\clearpage
+\include{chapters/preface}
+\endgroup
+
+\tableofcontents
+
+\mainmatter
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+
+\appendix
+\include{chapters/appendix}
+
+\backmatter
+\printbibliography[heading=bibintoc, title={参考文献}]
+
+\end{document}

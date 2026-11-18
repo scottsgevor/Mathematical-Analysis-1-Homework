@@ -1,0 +1,25 @@
+\chapter{基础知识}
+\section{数学公式}
+\LaTeX\ 在数学排版上优势明显\cite{knuth84}。例如著名的欧拉公式：
+\begin{equation}\label{eq:euler}
+  e^{i\pi} + 1 = 0
+\end{equation}
+引用公式 \eqref{eq:euler} 可以这样写。
+多行对齐环境也经常使用：
+\begin{align}
+  a &= b + c \\
+  d &= e + f + g + h \nonumber \\
+    &= i + j
+\end{align}
+
+\section{列表环境}
+使用 \texttt{enumitem} 宏包可以方便地定制列表：
+\begin{itemize}[label=\textbullet, leftmargin=*]
+  \item 第一项
+  \item 第二项
+  \begin{enumerate}[label=\alph*), nosep]
+    \item 子条目一
+    \item 子条目二
+  \end{enumerate}
+  \item 第三项
+\end{itemize}

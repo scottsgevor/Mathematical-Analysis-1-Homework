@@ -1,0 +1,33 @@
+\chapter{图表与代码}
+\section{图片插入}
+图 \ref{fig:ex} 展示了一张示例图片。
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{example-image-a} % 需安装 mwe 宏包或替换为实际图片
+  \caption{示例图片}\label{fig:ex}
+\end{figure}
+
+\section{表格}
+表 \ref{tab:example} 是一个简单的三线表。
+\begin{table}[htbp]
+  \centering
+  \caption{简单数据表}\label{tab:example}
+  \begin{tabular}{@{}llr@{}}
+    \toprule
+    姓名 & 科目 & 成绩 \\
+    \midrule
+    张三 & 数学 & 95 \\
+    李四 & 英语 & 88 \\
+    王五 & 物理 & 76 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{代码清单}
+代码 \ref{code:hello} 是一段 Python 程序。
+\begin{lstlisting}[language=Python, caption={Hello World}, label=code:hello]
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("LaTeX")
+\end{lstlisting}

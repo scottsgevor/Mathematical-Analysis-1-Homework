@@ -1,0 +1,34 @@
+# LaTeX 编译产生的临时文件
+*.aux
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.nlo
+*.nls
+*.gls
+*.glg
+*.glo
+*.xdy
+*.ist
+*.acn
+*.acr
+*.alg
+*.bcf
+*.run.xml
+
+# 编译生成的 PDF（建议不提交，通过 CI 自动生成）
+*.pdf
+
+# VSCode 配置文件
+.vscode/

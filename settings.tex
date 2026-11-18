@@ -1,0 +1,54 @@
+% ---------- 页面布局与页眉页脚 ----------
+\usepackage[inner=3cm, outer=2cm, top=2.5cm, bottom=2.5cm, headheight=14.5pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\leftmark}
+\fancyhead[LE]{\rightmark}
+\fancyhead[C]{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% ---------- 数学与符号 ----------
+\usepackage{amsmath, amssymb}
+
+% ---------- 图表 ----------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{caption}
+
+% ---------- 颜色与列表 ----------
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+% ---------- 代码排版 ----------
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  commentstyle=\itshape\color{gray},
+  keywordstyle=\color{blue},
+  stringstyle=\color{orange},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  breaklines=true,
+  showstringspaces=false,
+  captionpos=b
+}
+
+% ---------- 绘图（可选） ----------
+\usepackage{tikz}
+
+% ---------- 超链接（通常最后加载） ----------
+\usepackage[colorlinks, linkcolor=blue, citecolor=green!40!black,
+            urlcolor=cyan]{hyperref}
+
+% ---------- 参考文献后端 ----------
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
